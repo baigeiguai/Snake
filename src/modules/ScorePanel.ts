@@ -5,7 +5,7 @@ class ScorePanel{
     private score:number;
     private level:number;
     private upPerScoreNum:number;
-    constructor(upPerScoreNum:number=5,maxLever:number=10) {
+    constructor(upPerScoreNum:number=3,maxLever:number=10) {
         this.score=0;
         this.level=1;
         this.levelEle=document.getElementById("level")!;
@@ -23,6 +23,9 @@ class ScorePanel{
         if(this.level<this.maxLevel) {
             this.levelEle.innerHTML = ++this.level + "";
         }
+    }
+    get Level(){
+        return this.level;
     }
 };
 
