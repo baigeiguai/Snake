@@ -1,4 +1,10 @@
 import "./index.less";
-let a:number =1;
-a+=1;
-console.log(a);
+import Food from "./modules/Food";
+import scorePanel from "./modules/ScorePanel";
+import ScorePanel from "./modules/ScorePanel";
+let food= new Food();
+let scorepanel=new ScorePanel();
+
+for (let i=0;i<44;i++){
+    scorepanel.upscore();
+}
